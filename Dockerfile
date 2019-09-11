@@ -1,4 +1,4 @@
-FROM gcr.io/google-appengine/python:latest
+FROM python:3.6-jessie
 
 RUN apt update
 
