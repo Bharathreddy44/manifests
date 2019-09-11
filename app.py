@@ -34,14 +34,14 @@ def login():
         ruser = f.read()
     else:
         print(" Kube secrets not set use default to login")
-        user = "admin"
+        ruser = "admin"
 
     if path.exists("/etc/secrets/password"):
         q = open("/etc/secrets/password", "r")
         rpasswd = q.read()
     else:
         print(" Kube secrets not set use default for password")
-        passwd = "password"
+        rpasswd = "password"
         
     if request.method == 'POST':
         #if request.form['username'] != ruser.decode('base64') or request.form['password'] != rpasswd.decode('base64'):
